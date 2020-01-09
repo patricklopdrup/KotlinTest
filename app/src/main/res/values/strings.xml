@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">KotlinTest</string>
+    <string name="start_page_title">Start page</string>
+    <string name="start_page_button1_txt">Button1</string>
+    <string name="start_page_button2_txt">Button2</string>
 </resources>

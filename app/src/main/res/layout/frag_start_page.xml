@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/start_page_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:text="@string/start_page_title"
+        app:layout_constraintEnd_toStartOf="@+id/start_page_guideline1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/start_page_guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_page_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_page_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/start_page_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/start_page_guideline1"
+        app:layout_constraintStart_toStartOf="@+id/start_page_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/start_page_title"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/start_page_button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/start_page_button1_txt"
+        app:layout_constraintEnd_toStartOf="@+id/start_page_guideline1"
+        app:layout_constraintStart_toStartOf="@+id/start_page_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/start_page_img" />
+
+    <Button
+        android:id="@+id/start_page_button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/start_page_button2_txt"
+        app:layout_constraintEnd_toStartOf="@+id/start_page_guideline1"
+        app:layout_constraintStart_toStartOf="@+id/start_page_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/start_page_button1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
