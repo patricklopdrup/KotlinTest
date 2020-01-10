@@ -17,11 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <StackView
+        <ListView
             android:id="@+id/widget_stack_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:loopViews="true"/>
+            android:loopViews="true"
+            android:rotation="90"/>
 
         <TextView
             android:id="@+id/widget_empty_view"
