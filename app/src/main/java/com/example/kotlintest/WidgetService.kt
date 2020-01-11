@@ -17,8 +17,8 @@ class WidgetService: RemoteViewsService() {
 
         var context: Context
         var appWidgetId: Int = 0
-        var dataTitle = arrayOf("hej", "test", "yeet", "dav", "dååm")
-        var dataDesc = arrayOf("hej desc", "test desc", "yeet desc", "dav desc", "dååm desc")
+        var dataTitle = arrayOf("hej", "test", "yeet", "dav", "dååm", "meme", "orale", "skrt", "xd", "xdd")
+        var dataDesc = arrayOf("hej desc", "test desc", "yeet desc", "dav desc", "dååm desc", "meme", "orale", "skrt", "xd", "xdd")
 
         constructor(context: Context, intent: Intent) {
             this.context = context

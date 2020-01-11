@@ -15,14 +15,14 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_purple">
 
         <ListView
             android:id="@+id/widget_stack_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:loopViews="true"
-            android:rotation="90"/>
+            android:layout_height="wrap_content"
+            android:loopViews="true" />
 
         <TextView
             android:id="@+id/widget_empty_view"
