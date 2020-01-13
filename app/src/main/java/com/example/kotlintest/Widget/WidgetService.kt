@@ -1,24 +1,28 @@
-package com.example.kotlintest
+package com.example.kotlintest.Widget
 
 import android.appwidget.AppWidgetManager
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
+import com.example.kotlintest.R
 
 class WidgetService: RemoteViewsService() {
 
     override fun onGetViewFactory(intent: Intent?): RemoteViewsFactory {
         println("i onGetViewFactory")
-        return WidgetItemFactory(applicationContext, intent!!)
+        return WidgetItemFactory(
+            applicationContext,
+            intent!!
+        )
     }
 
     class WidgetItemFactory: RemoteViewsFactory {
 
         var context: Context
         var appWidgetId: Int = 0
-        var dataTitle = arrayOf("hej", "test", "yeet", "dav", "dååm", "meme", "orale", "skrt", "xd", "xdd")
-        var dataDesc = arrayOf("hej desc", "test desc", "yeet desc", "dav desc", "dååm desc", "meme", "orale", "skrt", "xd", "xdd")
+        var dataTitle = arrayOf("hej", "test", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9")
+        var dataDesc = arrayOf("hej desc", "test", "test2 desc", "test3 desc", "test4 desc", "test5", "test6", "test7", "test8", "test9")
 
         constructor(context: Context, intent: Intent) {
             this.context = context
@@ -48,7 +52,9 @@ class WidgetService: RemoteViewsService() {
 
         override fun getViewAt(p0: Int): RemoteViews {
             println("getViewAt bliver kaldt")
-            val views = RemoteViews(context.packageName, R.layout.widget_item)
+            val views = RemoteViews(context.packageName,
+                R.layout.widget_item
+            )
             views.setTextViewText(R.id.widget_item_title, dataTitle[p0])
             views.setTextViewText(R.id.widget_item_desc, dataDesc[p0])
             return views

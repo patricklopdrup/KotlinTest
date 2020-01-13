@@ -1,4 +1,4 @@
-package com.example.kotlintest
+package com.example.kotlintest.Widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -8,6 +8,8 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.RemoteViews
+import com.example.kotlintest.MainActivity
+import com.example.kotlintest.R
 
 /**
  * Implementation of App Widget functionality.
@@ -31,7 +33,10 @@ class NewWidget : AppWidgetProvider() {
 
             val views = RemoteViews(context.packageName, R.layout.new_widget)
             views.setRemoteAdapter(R.id.widget_stack_view, serviceIntent)
-            views.setEmptyView(R.id.widget_stack_view, R.id.widget_empty_view)
+            views.setEmptyView(
+                R.id.widget_stack_view,
+                R.id.widget_empty_view
+            )
 
 
             appWidgetManager.updateAppWidget(appWidgetId, views)
